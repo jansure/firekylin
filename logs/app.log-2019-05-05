@@ -1,0 +1,152 @@
+[2019-05-05T19:44:46.158] [INFO] default - Server running at http://0.0.0.0:8360
+[2019-05-05T19:44:46.160] [INFO] default - ThinkJS version: 3.2.10
+[2019-05-05T19:44:46.160] [INFO] default - Environment: production
+[2019-05-05T19:44:46.160] [INFO] default - Workers: 1
+[2019-05-05T19:44:47.443] [ERROR] default - { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+    --------------------
+    at Protocol._enqueue (/root/firekylin/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/root/firekylin/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/root/firekylin/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/root/firekylin/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise (/root/firekylin/node_modules/think-helper/index.js:83:10)
+    at new Promise (<anonymous>)
+    at args (/root/firekylin/node_modules/think-helper/index.js:82:12)
+    at ThinkMysql.getConnection (/root/firekylin/node_modules/think-mysql/index.js:73:73)
+    at debounceInstance.debounce (/root/firekylin/node_modules/think-mysql/index.js:225:21)
+    at Promise.resolve.then (/root/firekylin/node_modules/think-debounce/index.js:19:16)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+[2019-05-05T19:44:52.824] [INFO] default - Server running at http://0.0.0.0:8360
+[2019-05-05T19:44:52.825] [INFO] default - ThinkJS version: 3.2.10
+[2019-05-05T19:44:52.825] [INFO] default - Environment: production
+[2019-05-05T19:44:52.825] [INFO] default - Workers: 1
+[2019-05-05T19:44:54.087] [ERROR] default - { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+    --------------------
+    at Protocol._enqueue (/root/firekylin/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/root/firekylin/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/root/firekylin/node_modules/mysql/lib/Connection.js:119:18)
+    at Pool.getConnection (/root/firekylin/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise (/root/firekylin/node_modules/think-helper/index.js:83:10)
+    at new Promise (<anonymous>)
+    at args (/root/firekylin/node_modules/think-helper/index.js:82:12)
+    at ThinkMysql.getConnection (/root/firekylin/node_modules/think-mysql/index.js:73:73)
+    at debounceInstance.debounce (/root/firekylin/node_modules/think-mysql/index.js:225:21)
+    at Promise.resolve.then (/root/firekylin/node_modules/think-debounce/index.js:19:16)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+[2019-05-05T19:45:14.619] [ERROR] default - { Error: ER_NO_SUCH_TABLE: Table 'firekylin.fk_options' doesn't exist
+    at Query.Sequence._packetToError (/root/firekylin/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/root/firekylin/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/root/firekylin/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/root/firekylin/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/root/firekylin/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/root/firekylin/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/root/firekylin/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/root/firekylin/node_modules/mysql/lib/Connection.js:525:10)
+    at Socket.emit (events.js:189:13)
+    at Socket.EventEmitter.emit (domain.js:441:20)
+    --------------------
+    at Protocol._enqueue (/root/firekylin/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at PoolConnection.query (/root/firekylin/node_modules/mysql/lib/Connection.js:201:25)
+    at Promise (/root/firekylin/node_modules/think-helper/index.js:83:10)
+    at new Promise (<anonymous>)
+    at args (/root/firekylin/node_modules/think-helper/index.js:82:12)
+    at ThinkMysql.[think-mysql-query] (/root/firekylin/node_modules/think-mysql/index.js:165:12)
+    at getConnection.then.connection (/root/firekylin/node_modules/think-mysql/index.js:226:29)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: 'Table \'firekylin.fk_options\' doesn\'t exist',
+  sqlState: '42S02',
+  index: 0,
+  sql: 'SELECT * FROM `fk_options`' }
+[2019-05-05T19:46:01.827] [DEBUG] default - DROP TABLE IF EXISTS `fk_cate`
+[2019-05-05T19:46:01.829] [DEBUG] default - CREATE TABLE `fk_cate` (   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,   `name` varchar(255) NOT NULL,   `pid` int(11) NOT NULL DEFAULT '0',   `pathname` varchar(255) DEFAULT NULL,   PRIMARY KEY (`id`),   UNIQUE KEY `name` (`name`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:01.860] [DEBUG] default - DROP TABLE IF EXISTS `fk_options`
+[2019-05-05T19:46:01.861] [DEBUG] default - CREATE TABLE `fk_options` (   `key` varchar(255) NOT NULL DEFAULT '',   `value` text,   `desc` varchar(255) DEFAULT NULL,   PRIMARY KEY (`key`),   UNIQUE KEY `key` (`key`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:01.885] [DEBUG] default - INSERT INTO `fk_options` (`key`, `value`, `desc`) VALUES   ('analyze_code','','统计代码，可以添加百度统计、Google 统计等'),   ('auto_summary', '0', '自动摘要。0 为禁用，具体的数字为摘要截取的字符数'),   ('comment','{\"type\":\"duoshuo\",\"name\":\"welefen2013\"}','评论类型'),   ('description','A Simple & Fast Node Bloging Platform Base On ThinkJS 2.0 & ReactJS & ES6/7','网站描述'),   ('favicon_url','','favicon'),   ('github_blog','welefen/blog','GitHub blog 地址，如果填了则同步到 GitHub 上'),   ('github_url','https://github.com/75team/thinkjs','GitHub 地址'),   ('image_upload',NULL,'图片存放的位置，默认存在放网站上。也可以选择放在七牛或者又拍云等地方'),   ('keywords','www,fasdf,fasdfa','网站关键字'),   ('logo_url','/static/img/firekylin.jpg','logo 地址'),   ('miitbeian','wewww','网站备案号'),   ('postsListSize','10','文章一页显示的条数'),   ('password_salt','firekylin','密码 salt，网站安装的时候随机生成一个'),   ('push','0','是否允许推送'),   ('push_sites','','推送网站列表'),   ('site_url','http://127.0.0.1:8360','网站地址'),   ('theme','firekylin','主题名称'),   ('title','Firekylin 系统','网站标题'),   ('twitter_url','','微博地址'),   ('navigation', '[{"label":"首页","url":"/","option":"home"},{"label":"归档","url":"/archives/","option":"archive"},{"label":"标签","url":"/tags","option":"tags"},{"label":"关于","url":"/about","option":"user"},{"label":"友链","url":"/links","option":"link"}]', '导航菜单'),   ('two_factor_auth','','是否开启二步验证'),   ('upload',NULL,'上传配置，默认为本地，也可以选择七牛或者又拍云')
+[2019-05-05T19:46:01.889] [DEBUG] default - DROP TABLE IF EXISTS `fk_post`
+[2019-05-05T19:46:01.890] [DEBUG] default - CREATE TABLE `fk_post` (   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,   `user_id` int(10) unsigned NOT NULL,   `type` tinyint(11) NOT NULL DEFAULT '0' COMMENT '0 为文章，1 为页面',   `status` tinyint(11) NOT NULL DEFAULT '0' COMMENT '0 为草稿，1 为待审核，2 为已拒绝，3 为已经发布',   `title` varchar(255) NOT NULL,   `pathname` varchar(255) NOT NULL DEFAULT '' COMMENT 'URL 的 pathname',   `summary` longtext NOT NULL COMMENT '摘要',   `markdown_content` longtext NOT NULL,   `content` longtext CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,   `allow_comment` tinyint(11) NOT NULL DEFAULT '1' COMMENT '1 为允许， 0 为不允许',   `create_time` datetime DEFAULT NULL,   `update_time` datetime NOT NULL,   `is_public` tinyint(11) NOT NULL DEFAULT '1' COMMENT '1 为公开，0 为不公开',   `comment_num` int(11) NOT NULL DEFAULT '0',   `options` text COMMENT '一些选项，JSON 结构',   PRIMARY KEY (`id`),   KEY `create_time` (`create_time`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:01.912] [DEBUG] default - DROP TABLE IF EXISTS `fk_post_cate`
+[2019-05-05T19:46:01.913] [DEBUG] default - CREATE TABLE `fk_post_cate` (   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,   `post_id` int(11) NOT NULL,   `cate_id` int(11) NOT NULL,   PRIMARY KEY (`id`),   UNIQUE KEY `post_cate` (`post_id`,`cate_id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:01.949] [DEBUG] default - DROP TABLE IF EXISTS `fk_post_history`
+[2019-05-05T19:46:01.950] [DEBUG] default - CREATE TABLE `fk_post_history` (   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,   `post_id` int(11) DEFAULT NULL,   `markdown_content` text,   `update_user_id` int(11) DEFAULT NULL COMMENT '更新用户的 ID',   PRIMARY KEY (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:01.971] [DEBUG] default - DROP TABLE IF EXISTS `fk_post_tag`
+[2019-05-05T19:46:01.972] [DEBUG] default - CREATE TABLE `fk_post_tag` (   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,   `post_id` int(11) NOT NULL,   `tag_id` int(11) NOT NULL,   PRIMARY KEY (`id`),   UNIQUE KEY `post_tag` (`post_id`,`tag_id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:02.011] [DEBUG] default - DROP TABLE IF EXISTS `fk_tag`
+[2019-05-05T19:46:02.012] [DEBUG] default - CREATE TABLE `fk_tag` (   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,   `name` varchar(255) DEFAULT NULL,   `pathname` varchar(255) DEFAULT NULL,   PRIMARY KEY (`id`),   UNIQUE KEY `name` (`name`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:02.042] [DEBUG] default - DROP TABLE IF EXISTS `fk_user`
+[2019-05-05T19:46:02.043] [DEBUG] default - CREATE TABLE `fk_user` (   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,   `name` varchar(255) NOT NULL DEFAULT '',   `display_name` varchar(255) DEFAULT NULL,   `password` varchar(255) NOT NULL DEFAULT '',   `type` tinyint(11) NOT NULL DEFAULT '1' COMMENT '1 为管理员  2 为编辑',   `email` varchar(255) NOT NULL DEFAULT '',   `status` tinyint(11) NOT NULL DEFAULT '1' COMMENT '1 为有效 2 为禁用',   `create_time` datetime NOT NULL,   `create_ip` varchar(20) NOT NULL DEFAULT '',   `last_login_time` datetime NOT NULL,   `last_login_ip` varchar(20) NOT NULL DEFAULT '',   `app_key` varchar(255) DEFAULT NULL,   `app_secret` varchar(255) DEFAULT NULL,   PRIMARY KEY (`id`),   UNIQUE KEY `name` (`name`),   UNIQUE KEY `email` (`email`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+[2019-05-05T19:46:02.293] [DEBUG] default - clear cache
+[2019-05-05T19:46:08.198] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T19:50:35.876] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T19:51:56.402] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T19:52:35.157] [INFO] default - Server running at http://0.0.0.0:8360
+[2019-05-05T19:52:35.159] [INFO] default - ThinkJS version: 3.2.10
+[2019-05-05T19:52:35.159] [INFO] default - Environment: production
+[2019-05-05T19:52:35.159] [INFO] default - Workers: 1
+[2019-05-05T20:05:05.949] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:05:09.780] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:09:05.493] [INFO] default - Server running at http://0.0.0.0:8360
+[2019-05-05T20:09:05.495] [INFO] default - ThinkJS version: 3.2.10
+[2019-05-05T20:09:05.495] [INFO] default - Environment: production
+[2019-05-05T20:09:05.495] [INFO] default - Workers: 1
+[2019-05-05T20:11:48.315] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:11:52.677] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:11:53.226] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:11:53.405] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:11:53.576] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:11:53.886] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:11:54.044] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:12:01.344] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:13:20.548] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:11.515] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:16.841] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:17.331] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:17.518] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:17.841] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:22.461] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:35.011] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:36.267] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:51.544] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:14:53.463] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:15:00.450] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:15:00.993] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:15:37.332] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:16:00.482] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:16:22.316] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:21:30.072] [INFO] default - Server running at http://0.0.0.0:8360
+[2019-05-05T20:21:30.074] [INFO] default - ThinkJS version: 3.2.10
+[2019-05-05T20:21:30.074] [INFO] default - Environment: production
+[2019-05-05T20:21:30.074] [INFO] default - Workers: 1
+[2019-05-05T20:21:53.585] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:22:12.705] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:22:14.973] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:22:15.484] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:22:15.666] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:22:15.824] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:22:16.230] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:22:32.655] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:23:04.865] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:23:58.020] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:23:59.992] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:24:02.013] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:30:10.259] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:30:17.207] [DEBUG] default - clear cache
+[2019-05-05T20:31:34.185] [DEBUG] default - clear cache
+[2019-05-05T20:32:03.305] [DEBUG] default - clear cache
+[2019-05-05T20:36:44.126] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:37:31.436] [DEBUG] default - clear cache
+[2019-05-05T20:38:23.480] [INFO] default - NORMAL VERIFY TYPE
+[2019-05-05T20:38:32.443] [DEBUG] default - clear cache
+[2019-05-05T21:53:18.107] [INFO] default - NORMAL VERIFY TYPE

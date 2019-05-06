@@ -1,0 +1,242 @@
+{
+  "admin": {
+    "port": 8360,
+    "workers": 1,
+    "stickyCluster": false,
+    "startServerTimeout": 3000,
+    "reloadSignal": "SIGUSR2",
+    "processKillTimeout": 10000,
+    "jsonpCallbackField": "callback",
+    "jsonContentType": "application/json",
+    "jsonpContentType": "application/javascript",
+    "errnoField": "errno",
+    "errmsgField": "errmsg",
+    "defaultErrno": 1000,
+    "validateDefaultErrno": 1001,
+    "host": "0.0.0.0",
+    "DISALLOW_FILE_EDIT": false,
+    "cache": {
+      "type": "file",
+      "file": {
+        "timeout": 86400000,
+        "cachePath": "/root/firekylin/runtime/cache",
+        "pathDepth": 2,
+        "gcInterval": 86400000
+      }
+    },
+    "model": {
+      "type": "mysql",
+      "mysql": {
+        "logConnect": false,
+        "logSql": false,
+        "dateStrings": true,
+        "host": "192.168.1.96",
+        "port": "3306",
+        "database": "firekylin",
+        "user": "root",
+        "password": "Abc=1234",
+        "prefix": "fk_",
+        "encoding": "utf8mb4"
+      }
+    },
+    "session": {
+      "type": "file",
+      "file": {
+        "secret": "!N71PV5J",
+        "timeout": 86400,
+        "cookie": {
+          "name": "thinkjs",
+          "length": 32,
+          "httponly": true
+        },
+        "sessionPath": "/root/firekylin/runtime/session"
+      }
+    },
+    "view": {
+      "type": "nunjucks",
+      "nunjucks": {
+        "viewPath": "/root/firekylin/view",
+        "sep": "_",
+        "extname": ".html",
+        "content_type": "text/html"
+      }
+    },
+    "logger": {
+      "type": "dateFile",
+      "console": {},
+      "file": {
+        "backups": 10,
+        "absolute": true,
+        "maxLogSize": 51200,
+        "filename": "/root/firekylin/logs/app.log"
+      },
+      "dateFile": {
+        "level": "ALL",
+        "absolute": true,
+        "pattern": "-yyyy-MM-dd",
+        "alwaysIncludePattern": true,
+        "filename": "/root/firekylin/logs/app.log"
+      }
+    }
+  },
+  "common": {
+    "port": 8360,
+    "workers": 1,
+    "stickyCluster": false,
+    "startServerTimeout": 3000,
+    "reloadSignal": "SIGUSR2",
+    "processKillTimeout": 10000,
+    "jsonpCallbackField": "callback",
+    "jsonContentType": "application/json",
+    "jsonpContentType": "application/javascript",
+    "errnoField": "errno",
+    "errmsgField": "errmsg",
+    "defaultErrno": 1000,
+    "validateDefaultErrno": 1001,
+    "host": "0.0.0.0",
+    "DISALLOW_FILE_EDIT": false,
+    "cache": {
+      "type": "file",
+      "file": {
+        "timeout": 86400000,
+        "cachePath": "/root/firekylin/runtime/cache",
+        "pathDepth": 2,
+        "gcInterval": 86400000
+      }
+    },
+    "model": {
+      "type": "mysql",
+      "mysql": {
+        "logConnect": false,
+        "logSql": false,
+        "dateStrings": true,
+        "host": "192.168.1.96",
+        "port": "3306",
+        "database": "firekylin",
+        "user": "root",
+        "password": "Abc=1234",
+        "prefix": "fk_",
+        "encoding": "utf8mb4"
+      }
+    },
+    "session": {
+      "type": "file",
+      "file": {
+        "secret": "!N71PV5J",
+        "timeout": 86400,
+        "cookie": {
+          "name": "thinkjs",
+          "length": 32,
+          "httponly": true
+        },
+        "sessionPath": "/root/firekylin/runtime/session"
+      }
+    },
+    "view": {
+      "type": "nunjucks",
+      "nunjucks": {
+        "viewPath": "/root/firekylin/view",
+        "sep": "_",
+        "extname": ".html",
+        "content_type": "text/html"
+      }
+    },
+    "logger": {
+      "type": "dateFile",
+      "console": {},
+      "file": {
+        "backups": 10,
+        "absolute": true,
+        "maxLogSize": 51200,
+        "filename": "/root/firekylin/logs/app.log"
+      },
+      "dateFile": {
+        "level": "ALL",
+        "absolute": true,
+        "pattern": "-yyyy-MM-dd",
+        "alwaysIncludePattern": true,
+        "filename": "/root/firekylin/logs/app.log"
+      }
+    }
+  },
+  "home": {
+    "port": 8360,
+    "workers": 1,
+    "stickyCluster": false,
+    "startServerTimeout": 3000,
+    "reloadSignal": "SIGUSR2",
+    "processKillTimeout": 10000,
+    "jsonpCallbackField": "callback",
+    "jsonContentType": "application/json",
+    "jsonpContentType": "application/javascript",
+    "errnoField": "errno",
+    "errmsgField": "errmsg",
+    "defaultErrno": 1000,
+    "validateDefaultErrno": 1001,
+    "host": "0.0.0.0",
+    "DISALLOW_FILE_EDIT": false,
+    "cache": {
+      "type": "file",
+      "file": {
+        "timeout": 86400000,
+        "cachePath": "/root/firekylin/runtime/cache",
+        "pathDepth": 2,
+        "gcInterval": 86400000
+      }
+    },
+    "model": {
+      "type": "mysql",
+      "mysql": {
+        "logConnect": false,
+        "logSql": false,
+        "dateStrings": true,
+        "host": "192.168.1.96",
+        "port": "3306",
+        "database": "firekylin",
+        "user": "root",
+        "password": "Abc=1234",
+        "prefix": "fk_",
+        "encoding": "utf8mb4"
+      }
+    },
+    "session": {
+      "type": "file",
+      "file": {
+        "secret": "!N71PV5J",
+        "timeout": 86400,
+        "cookie": {
+          "name": "thinkjs",
+          "length": 32,
+          "httponly": true
+        },
+        "sessionPath": "/root/firekylin/runtime/session"
+      }
+    },
+    "view": {
+      "type": "nunjucks",
+      "nunjucks": {
+        "viewPath": "/root/firekylin/view",
+        "sep": "_",
+        "extname": ".html",
+        "content_type": "text/html"
+      }
+    },
+    "logger": {
+      "type": "dateFile",
+      "console": {},
+      "file": {
+        "backups": 10,
+        "absolute": true,
+        "maxLogSize": 51200,
+        "filename": "/root/firekylin/logs/app.log"
+      },
+      "dateFile": {
+        "level": "ALL",
+        "absolute": true,
+        "pattern": "-yyyy-MM-dd",
+        "alwaysIncludePattern": true,
+        "filename": "/root/firekylin/logs/app.log"
+      }
+    }
+  }
+}
